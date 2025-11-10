@@ -45,27 +45,27 @@ engine:
     - ascii_segmentor
     - matcher
     - abc_segmentor
-    - affix_segmentor@putonghua_to_kanji_lookup
-    - affix_segmentor@hannom_lookup
-    - affix_segmentor@hanja_lookup
+    # - affix_segmentor@putonghua_to_kanji_lookup
+    # - affix_segmentor@hannom_lookup
+    # - affix_segmentor@hanja_lookup
     - punct_segmentor
     - fallback_segmentor
   translators:
     - punct_translator
     - script_translator
     - reverse_lookup_translator
-    - script_translator@putonghua_to_kanji_lookup
-    - script_translator@hannom_lookup
-    - script_translator@hanja_lookup
+    # - script_translator@putonghua_to_kanji_lookup
+    # - script_translator@hannom_lookup
+    # - script_translator@hanja_lookup
   filters:
     - simplifier
     #- simplifier@jp_variants
     #- simplifier@zh_simp
     #- simplifier@zh_tw
     - uniquifier
-    - reverse_lookup_filter@putonghua_to_kanji_reverse_lookup
-    - reverse_lookup_filter@hannom_reverse_lookup
-    - reverse_lookup_filter@hanja_reverse_lookup
+    # - reverse_lookup_filter@putonghua_to_kanji_reverse_lookup
+    # - reverse_lookup_filter@hannom_reverse_lookup
+    # - reverse_lookup_filter@hanja_reverse_lookup
 
 speller:
   alphabet: 'zyxwvutsrqponmlkjihgfedcba-_'
