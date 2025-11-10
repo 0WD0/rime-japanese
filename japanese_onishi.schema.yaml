@@ -82,6 +82,8 @@ speller:
 
 translator:
   dictionary: japanese
+  prism: japanese_onishi
+  user_dict: japanese_onishi
   spelling_hints: 5
   comment_format:
     - 'xlit|q|ー|'
