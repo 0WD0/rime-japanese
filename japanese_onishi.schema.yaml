@@ -69,7 +69,7 @@ engine:
     # - reverse_lookup_filter@hanja_reverse_lookup
 
 speller:
-  alphabet: 'zyxwvutsrqponmlkjihgfedcba-_,.;/'
+  alphabet: 'zyxwvusqponmlkjihgfedcba-_,.;/'
   delimiter: " '"
   algebra:
     # Transliterate physical QWERTY keystrokes into Onishi logical characters early.
@@ -396,8 +396,78 @@ hanja_reverse_lookup:
     - xform/(^|[ '])q/$1/
     - xform/q/ng/
 
-# punctuator:
-#   import_preset: default
+punctuator:
+  full_shape:
+    ' ' : { commit: '　' }
+    # ',' : { commit: ， }
+    # '.' : { commit: 。 }
+    'r' : { commit: '，' }
+    't' : { commit: '。' }
+    '<' : [ 《, 〈, «, ‹ ]
+    '>' : [ 》, 〉, », › ]
+    '/' : [ /, ÷, ×, ＋, − ]
+    '?' : { commit: ？ }
+    ';' : { commit: ； }
+    ':' : { commit: ： }
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    '\' : [ 、, ＼ ]
+    '|' : [ ·, ｜, '§', '¦' ]
+    '`' : ｀
+    '~' : ～
+    '!' : { commit: ！ }
+    '@' : [ ＠, ☯ ]
+    '#' : [ ＃, ⌘ ]
+    '%' : [ ％, '°', '℃' ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
+    '^' : { commit: …… }
+    '&' : ＆
+    '*' : [ ＊, ·, ・, ×, ※, ❂ ]
+    '(' : （
+    ')' : ）
+    '-' : －
+    '_' : ——
+    '+' : ＋
+    '=' : ＝
+    '[' : [ 「, 【, 〔, ［ ]
+    ']' : [ 」, 】, 〕, ］ ]
+    '{' : [ 『, 〖, ｛ ]
+    '}' : [ 』, 〗, ｝ ]
+  half_shape:
+    # ',' : '，'
+    # '.' : '。'
+    'r' : { commit: ',' }
+    't' : { commit: '.' }
+    '<' : '《'
+    '>' : '》'
+    '/' : '/'
+    '?' : '？'
+    ';' : '；'
+    ':' : '：'
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    '\' : '、'
+    '|' : '|'
+    '`' : [ "`", "```" ]
+    '~' : '~'
+    '!' : '！'
+    '@' : '@'
+    '#' : '#'
+    '%' : '%'
+    '$' : '¥'
+    '^' : '……'
+    '&' : '&'
+    '*' : '*'
+    '(' : '（'
+    ')' : '）'
+    '-' : '-'
+    '_' : ——
+    '+' : '+'
+    '=' : '='
+    '[' : '【'
+    ']' : '】'
+    '{' : '「'
+    '}' : '」'
 
 key_binder:
   bindings:
