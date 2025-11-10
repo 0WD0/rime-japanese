@@ -3,9 +3,10 @@
 # encoding: utf-8
 
 schema:
-  schema_id: japanese
-  name: 日本語
-  version: 'v0.2'
+  schema_id: japanese_onishi
+  name: 日本語（大西配列）
+  version: 'v0.2-onishi'
+  description: 'Japanese layout with Onishi key remapping applied before romanization.'
   author:
     - ensigma96 <ensigma96@gmail.com>
   dependencies:
@@ -71,6 +72,8 @@ speller:
   alphabet: 'zyxwvutsrqponmlkjihgfedcba-_'
   delimiter: " '"
   algebra:
+    # Transliterate physical QWERTY keystrokes into Onishi logical characters early.
+    - 'xlit|qwertyuiopasdfghjkl;zxcvbnm,./QWERTYUIOPASDFGHJKL:ZXCVBNM<>?|qlu,.fwrypeiao-ktnshzxcv;gdmjbQLU<>FWRYPEIAO_KTNSHZXCV:GDMJB|'
     - 'derive/_/x/'
     - 'derive/-/q/'
     # Add / remove rules the as you wish
@@ -392,7 +395,6 @@ hanja_reverse_lookup:
 
 # punctuator:
 #   import_preset: default
-# 这里如果不注释会直接构建失败，应该是 rime 有 breaking change
 
 key_binder:
   bindings:
