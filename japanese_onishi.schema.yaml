@@ -10,7 +10,6 @@ schema:
   author:
     - ensigma96 <ensigma96@gmail.com>
   dependencies:
-    - terra_pinyin.extended # for using reverse lookup
     - stroke
 
 switches:
@@ -72,13 +71,38 @@ speller:
   alphabet: 'zyxwvusqponmlkjihgfedcba-_,.;/'
   delimiter: " '"
   algebra:
-    # Transliterate physical QWERTY keystrokes into Onishi logical characters early.
-    - 'xlit|qlu,.fwrypeiao-ktnshzxcv;gdmjbQLU<>FWRYPEIAO_KTNSHZXCV:GDMJB|qwertyuiopasdfghjkl;zxcvbnm,./QWERTYUIOPASDFGHJKL:ZXCVBNM<>?|'
     - 'derive/_/x/'
     - 'derive/-/q/'
     # Add / remove rules the as you wish
     - 'derive/i_e/ye/'
+    # Kunrei-shiki style aliases
+    - 'derive/shi/si/'
+    - 'derive/ji/zi/'
+    - 'derive/chi/ti/'
+    - 'derive/ji/di/'
+    - 'derive/tsu/tu/'
+    - 'derive/zu/du/'
+    - 'derive/sha/sya/'
+    - 'derive/shu/syu/'
+    - 'derive/sho/syo/'
+    - 'derive/cha/tya/'
+    - 'derive/chu/tyu/'
+    - 'derive/cho/tyo/'
+    - 'derive/ja/zya/'
+    - 'derive/ju/zyu/'
+    - 'derive/jo/zyo/'
+    - 'derive/ja/jya/'
+    - 'derive/ju/jyu/'
+    - 'derive/jo/jyo/'
+    - 'derive/cha/cya/'
+    - 'derive/chu/cyu/'
+    - 'derive/cho/cyo/'
+    - 'derive/ja/dya/'
+    - 'derive/ju/dyu/'
+    - 'derive/jo/dyo/'
     # - 'derive/fu/hu/'
+    # Transliterate physical QWERTY keystrokes into Onishi logical characters early.
+    - 'xlit|qlu,.fwrypeiao-ktnshzxcv;gdmjbQLU<>FWRYPEIAO_KTNSHZXCV:GDMJB|qwertyuiopasdfghjkl;zxcvbnm,./QWERTYUIOPASDFGHJKL:ZXCVBNM<>?|'
 
 translator:
   dictionary: japanese
