@@ -9,6 +9,7 @@ schema:
   description: 'Japanese layout with Onishi key remapping applied before romanization.'
   author:
     - ensigma96 <ensigma96@gmail.com>
+    - 0WD0 <1105848296@qq.com>
   dependencies:
     - stroke
 

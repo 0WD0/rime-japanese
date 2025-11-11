@@ -8,6 +8,7 @@ schema:
   version: 'v0.2'
   author:
     - ensigma96 <ensigma96@gmail.com>
+    - 0WD0 <1105848296@qq.com>
   dependencies:
     - terra_pinyin.extended # for using reverse lookup
     - stroke
