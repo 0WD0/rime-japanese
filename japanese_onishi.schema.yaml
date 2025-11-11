@@ -510,9 +510,8 @@ key_binder:
     - {accept: "Control+Shift+L", select: international, when: always}
     - {accept: "F16", select: .next, when: always}
     - {accept: "F19", select: international, when: always}
-    # [] Pagination
-    - {accept: bracketleft, send: Page_Up , when: has_menu}
-    - {accept: bracketright, send: Page_Down , when: has_menu}
+    - { when: has_menu, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
 
 recognizer:
   import_preset: default
